@@ -4,60 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='upload.css') }}">
     <title>DocxScan Master</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            border: 2px dashed #ccc;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        input[type="file"] {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 <body>
-     <form enctype="multipart/form-data" method="post" action="/upload">
+    <form enctype="multipart/form-data" method="post" action="/upload">
         <h1>DocxScan Master</h1>
         {% if err_msg %}
             <p>{{ err_msg }}</p>
         {% endif %}
         <input type="file" name="file" accept=".docx">
         <button type="submit">Upload</button>
+
+<!--        <p id="flashMessage" class="flash-message">This is a product from the computer department of Honeyland college.</p>-->
+
+<!--        <script>-->
+<!--            // Get the flash message element-->
+<!--            const flashMessage = document.getElementById('flashMessage');-->
+
+<!--            // Function to toggle the class after 3 seconds-->
+<!--            function flashAfterThreeSeconds() {-->
+<!--                setTimeout(() => {-->
+<!--                    flashMessage.classList.toggle('flash-message');-->
+<!--                    flashMessage.style.background = "black"-->
+<!--                    flashMessage.style.color = "white"-->
+<!--                    flashMessage.style.padding = "10px"-->
+<!--                }, 3000);-->
+<!--            }-->
+
+<!--            // Call the function on page load-->
+<!--            window.onload = flashAfterThreeSeconds;-->
+<!--        </script>-->
     </form>
 </body>
 </html>

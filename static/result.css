@@ -46,3 +46,47 @@ body {
         li {
             margin-bottom: 8px;
         }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Media query for 375px screens (mobile devices) */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 300px;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    li {
+        margin-bottom: 4px;
+    }
+    ul li{
+        font-size: 12px
+    }
+}
