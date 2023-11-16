@@ -1,0 +1,52 @@
+<!--result.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>DocxScan Master Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1>DocxScan Master Results</h1>
+
+        <div class="result-section">
+            <h2>Duplicate Questions</h2>
+            <ul>
+                {% for question in duplicate_questions %}
+                    <li>{{ question }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="result-section">
+            <h2>Font Styles</h2>
+            <ul>
+                {% for style in font_styles %}
+                    <li>{{ style }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="result-section">
+            <h2>Font Sizes</h2>
+            <ul>
+                {% for size in font_sizes %}
+                    <li>{{ size }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="result-section">
+            <h2>Line Spacing</h2>
+            <ul>
+                {% for spacing in line_spacing %}
+                    <li>{{ spacing }}</li>
+                {% endfor %}
+            </ul>
+            <a href="/">Back</a>
+        </div>
+    </div>
+</body>
+</html>
